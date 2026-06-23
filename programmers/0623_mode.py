@@ -22,4 +22,8 @@ def solution(array):
         return -1
     else:
         return modes[0]
-    return
+    '''
+    3. freq.items() -> key, value 전부 가져온다. 
+    if 문을 통하여 value가 max_count인 key, 즉, 가장 많이 있는 수를 파악한다.
+    만약 max_count가 1개 이상 **최다 빈출값 동일**시, modes 라는 배열에 2개 이상의 값이 담기니, 이를 기본으로 return 시 -1 혹은 1을 해준다.
+    '''
