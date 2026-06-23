@@ -2,9 +2,13 @@
 def solution(array):
     freq={}
     for num in array:
+        # freq[num]은 key로 value를 꺼내는 문법
+        # freq 라는 딕셔너리에 num 에 해당하는 key가 있는지 찾는다
         if num in freq:
+            # num 이라는 key의 value에 "1을 더한다"
             freq[num] += 1
         else:
+            # num 이라는 key로, 1 이라는 value의 키:값을 새로 만든다.
             freq[num] = 1
     '''
     1. 딕셔너리의 기본 동작
