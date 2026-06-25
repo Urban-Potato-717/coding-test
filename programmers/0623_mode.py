@@ -22,4 +22,15 @@ def solution(array):
         return -1
     else:
         return modes[0]
+    '''
+    3. modes 
+    이걸 풀어쓰면:
+    modes = []
+    for k, v in freq.items():
+      if v == max_count:
+          modes.append(k)
+
+    여기서 freq.items()를 알아야 하는데, 이는 key, value를 쌍으로 꺼낸다.
+    그래서 k에 key를, v에 value를 담는거임.
+    '''
     return
