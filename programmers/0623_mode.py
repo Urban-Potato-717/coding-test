@@ -2,9 +2,13 @@
 def solution(array):
     freq={}
     for num in array:
+        # freq[num]은 key로 value를 꺼내는 문법
+        # freq 라는 딕셔너리에 num 에 해당하는 key가 있는지 찾는다
         if num in freq:
+            # num 이라는 key의 value에 "1을 더한다"
             freq[num] += 1
         else:
+            # num 이라는 key로, 1 이라는 value의 키:값을 새로 만든다.
             freq[num] = 1
     '''
     1. 딕셔너리의 기본 동작
@@ -23,14 +27,7 @@ def solution(array):
     else:
         return modes[0]
     '''
-    3. modes 
-    이걸 풀어쓰면:
-    modes = []
-    for k, v in freq.items():
-      if v == max_count:
-          modes.append(k)
-
-    여기서 freq.items()를 알아야 하는데, 이는 key, value를 쌍으로 꺼낸다.
-    그래서 k에 key를, v에 value를 담는거임.
+    3. freq.items() -> key, value 전부 가져온다.
+    if 문을 통하여 value가 max_count인 key, 즉, 가장 많이 있는 수를 파악한다.
+    만약 max_count가 1개 이상 **최다 빈출값 동일**시, modes 라는 배열에 2개 이상의 값이 담기니, 이를 기본으로 return 시 -1 혹은 1을 해준다.
     '''
-    return
