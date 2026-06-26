@@ -5,8 +5,9 @@ Python으로 코딩테스트를 준비하는 저장소입니다.
 ## 폴더 구조
 
 ```
-📂 programmers/   # 프로그래머스 문제 풀이
-📂 notes/         # 개념 정리
+📂 programmers/              # 프로그래머스 문제 풀이
+📂 notes/                    # 개념 정리
+📂 Python for Data Analysis/ # 책 공부 노트
 ```
 
 ## 파일 네이밍
