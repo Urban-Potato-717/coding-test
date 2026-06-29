@@ -1,4 +1,7 @@
-#배열을 정렬하고 중앙값 return하기
+# 문제: 중앙값 구하기
+# 난이도: Lv.0 / 체감: ⭐⭐
+# 핵심: sort(), 중앙 인덱스, // 정수 나눗셈
+# 복습: 2026-06-30, 2026-07-02, 2026-07-06
 def solution(array):
     array.sort()
     return array[len(array)//2]

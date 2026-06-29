@@ -1,4 +1,7 @@
-#배열 중 최빈값을 return (최빈값이 여러 개면 -1 return)
+# 문제: 최빈값 구하기
+# 난이도: Lv.0 / 체감: ⭐⭐⭐⭐
+# 핵심: 딕셔너리, items()/values(), 리스트 컴프리헨션
+# 복습: 2026-06-30, 2026-07-02, 2026-07-06
 def solution(array):
     freq={}
     for num in array:

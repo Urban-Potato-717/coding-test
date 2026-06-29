@@ -1,4 +1,7 @@
-#배열 두배 만들기
+# 문제: 배열 두배 만들기
+# 난이도: Lv.0 / 체감: ⭐
+# 핵심: 반복문, 리스트 append
+# 복습: 2026-06-30, 2026-07-02, 2026-07-06
 def solution(numbers):
     answer=[]
     for idx in range(len(numbers)):

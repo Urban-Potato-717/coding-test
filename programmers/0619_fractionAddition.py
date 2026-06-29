@@ -1,4 +1,7 @@
-#분수의 덧셈
+# 문제: 분수의 덧셈
+# 난이도: Lv.0 / 체감: ⭐⭐⭐
+# 핵심: 유클리드 호제법, GCD, 분수 통분
+# 복습: 2026-06-30, 2026-07-02, 2026-07-06
 def solution(numer1, denom1, numer2, denom2):
     #공통 분수 만들어 더하기
     numer = numer1 * denom2 + numer2 * denom1
