@@ -7,7 +7,8 @@ Python으로 코딩테스트를 준비하는 저장소입니다.
 ```
 📂 programmers/              # 프로그래머스 문제 풀이
 📂 notes/                    # 개념 정리
-📂 Python for Data Analysis/ # 책 공부 노트
+📂 Python for Data Analysis/ # 책의 챕터별 실습 코드
+  └─ 📂 practice/            # 실습 코드 (.py)
 ```
 
 ## 파일 네이밍
@@ -15,6 +16,9 @@ Python으로 코딩테스트를 준비하는 저장소입니다.
 ```
 MMDD_문제이름.py
 예) 0619_compare.py
+
+Python for Data Analysis 실습은 챕터 이름으로 저장합니다.
+예) `practice/ch02_python_basics.py`
 ```
 
 ## 커밋 컨벤션
