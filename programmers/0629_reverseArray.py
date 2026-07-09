@@ -1,7 +1,6 @@
 # 문제: 배열 뒤집기
 # 난이도: Lv.0 / 체감: ⭐⭐
 # 핵심: 슬라이싱 [::-1], reverse() vs sort(reverse=True) 차이
-# 복습: 2026-06-30, 2026-07-02, 2026-07-06
 
 def solution(num_list):
     num_list.sort(reverse=True)
