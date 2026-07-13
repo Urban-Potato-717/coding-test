@@ -1,25 +1,27 @@
-# 문제: 옷가게 할인 받기
-# 난이도: Lv.0 / 체감: ⭐
-# 핵심: 조건문 순서, else 처리, int() 형변환
+"""옷가게 할인 받기.
 
-# 오답
-def solution(price):
-    if 300000 > price >= 100000:
-        return int(price * 0.95)
-    elif 500000 > price >= 300000:
-        return int(price * 0.9)
-    elif 1000000 > price >= 500000:
-        return int(price * 0.8)
-    
-# 고침
+결과: 오답 수정
+체감 난이도: 1/5
+핵심: 조건문의 순서, 경계값, 기본 반환값
+
+오답 원인:
+- 10만 원 미만 가격을 반환하지 않아 None이 나왔다.
+- 할인 구간을 여러 범위로 작성하면 경계값을 놓치기 쉽다.
+
+해결:
+- 가장 높은 기준부터 검사하면 하한만 비교해도 된다.
+- 어떤 할인 조건에도 해당하지 않는 값은 else에서 그대로 반환한다.
+
+복습 질문:
+- 가격이 정확히 100000, 300000, 500000일 때 각각 어느 조건에 들어가는가?
+"""
+
+
 def solution(price):
     if price >= 500000:
-        return int(price * .80)
-    elif price >= 300000:
-        return int(price * .90)
-    elif price >= 100000:
-        return int(price * .95)
-    else: 
-        return price # 10만원 미만일때의 return 안했음
-    # 그리고 int() 강제 형 변환 꼭 해줘야 했음
-    # 80/100 보단 0.8으로 계산. (.8도 되긴 하더라. 축약 표현임)
+        return int(price * 0.80)
+    if price >= 300000:
+        return int(price * 0.90)
+    if price >= 100000:
+        return int(price * 0.95)
+    return price

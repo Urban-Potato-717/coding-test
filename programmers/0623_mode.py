@@ -1,35 +1,43 @@
-# 문제: 최빈값 구하기
-# 난이도: Lv.0 / 체감: ⭐⭐⭐⭐⭐
-# 핵심: 딕셔너리, items()/values(), 리스트 컴프리헨션
+"""최빈값 구하기.
+
+결과: 해결
+체감 난이도: 5/5
+핵심: 딕셔너리 빈도표, items(), values(), 리스트 컴프리헨션
+
+막힌 부분:
+- 숫자별 횟수를 저장하는 방법과 최대 횟수에 해당하는 key를 찾는 방법이 어려웠다.
+
+원인과 해결:
+- 숫자를 key, 등장 횟수를 value로 저장하는 빈도표를 만든다.
+- 가장 큰 value를 구한 뒤 해당 value를 가진 key만 선택한다.
+- 그런 key가 여러 개면 최빈값이 여러 개이므로 -1을 반환한다.
+
+다음에 떠올릴 신호:
+- 값마다 등장 횟수를 세어야 하면 딕셔너리 빈도표를 생각한다.
+
+관련 노트:
+- notes/ListVSDictuinary.md
+- notes/Comprehension.md
+"""
+
+
 def solution(array):
-    freq={}
-    for num in array:
-        # freq[num]은 key로 value를 꺼내는 문법
-        # freq 라는 딕셔너리에 num 에 해당하는 key가 있는지 찾는다
-        if num in freq:
-            # num 이라는 key의 value에 "1을 더한다"
-            freq[num] += 1
+    frequencies = {}
+
+    for number in array:
+        if number in frequencies:
+            frequencies[number] += 1
         else:
-            # num 이라는 key로, 1 이라는 value의 키:값을 새로 만든다.
-            freq[num] = 1
-    '''
-    1. 딕셔너리의 기본 동작
-    array에서 숫자를 하나씩 꺼내 num에 담고 freq 딕셔너리에 넣으면, num이 **key**가 된다.
-    if num in freq를 통해, 처음 보는 숫자면 value로 1을 준다. ({1:1}이 처음으로 생성되는 것)
-    값이 있으면 +=1로 해당 key의 value를 1씩 높여준다. (count의 역할을 수행)
-    '''
-    max_count = max(freq.values())
-    '''
-    2. freq.values() -> key는 필요 없고 **value (여기서는 횟수)**만 볼 때 쓴다.
-    max(freq.values())를 사용하면 max()를 통해 주어진 value 중 가장 큰 값을 구한다. 
-    '''
-    modes=[key for key, value in freq.items() if value == max_count]
+            frequencies[number] = 1
+
+    max_count = max(frequencies.values())
+    modes = [
+        key
+        for key, value in frequencies.items()
+        if value == max_count
+    ]
+
     if len(modes) > 1:
         return -1
-    else:
-        return modes[0]
-    '''
-    3. freq.items() -> key, value 전부 가져온다.
-    if 문을 통하여 value가 max_count인 key, 즉, 가장 많이 있는 수를 파악한다.
-    만약 max_count가 1개 이상 **최다 빈출값 동일**시, modes 라는 배열에 2개 이상의 값이 담기니, 이를 기본으로 return 시 -1 혹은 1을 해준다.
-    '''
+
+    return modes[0]

@@ -1,13 +1,14 @@
-# 문제: 숫자 비교하기
-# 난이도: Lv.0 / 체감: ⭐
-# 핵심: 조건문, 삼항 연산자
-def solution(num1,num2):
-    if num1 == num2: 
-        return 1
-    else:
-        return -1
+"""숫자 비교하기.
 
-#* 삼항 연산자
-# 값1 if 조건 else 값2 - 값을 결정해주는 연산자
-def solution(num1,num2):
+결과: 해결
+체감 난이도: 1/5
+핵심: 조건문, 조건 표현식
+
+학습 기록:
+- 처음에는 if/else로 해결했다.
+- 두 결과 중 하나를 고르는 짧은 조건은 조건 표현식으로 나타낼 수 있다.
+"""
+
+
+def solution(num1, num2):
     return 1 if num1 == num2 else -1

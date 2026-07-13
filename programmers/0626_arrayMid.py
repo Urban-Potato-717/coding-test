@@ -1,14 +1,13 @@
-# 문제: 배열 원소의 평균값
-# 난이도: Lv.0 / 체감: ⭐
-# 핵심: sum() 내장함수, len()
-def solution(numbers):
-    num = 0
-    for x in numbers:
-        num += x
-    return num / len(numbers)
+"""배열 원소의 평균값.
 
-# 다른 사람의 풀이
+결과: 해결
+체감 난이도: 1/5
+핵심: sum(), len()
+
+학습 기록:
+- 반복문으로 합계를 누적할 수 있지만 sum(numbers)가 의도를 더 직접적으로 표현한다.
+"""
+
+
 def solution(numbers):
-    answer = sum(numbers) / len(numbers)
-    return answer
-# sum(리스트) - 리스트 전체를 다 더해주는 내장 함수.
+    return sum(numbers) / len(numbers)

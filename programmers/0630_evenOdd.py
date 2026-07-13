@@ -1,24 +1,23 @@
-# 문제: 짝수 홀수 개수
-# 난이도: Lv.0 / 체감: ⭐⭐
-# 핵심: 나머지 연산 %, 카운터 변수, 결과 리스트 인덱스
+"""짝수 홀수 개수.
 
-# 나의 풀이
-def solution(num_list):
-    even = 0
-    odd = 0
-    for x in num_list:
-        if x % 2 == 0:
-            even += 1
-        else: 
-            odd +=1
-    return [even,odd]
+결과: 해결
+체감 난이도: 2/5
+핵심: 나머지, 카운터 변수
 
-# 다른 사람의 풀이 1 - 각 숫자를 순회하며 위치를 1씩 증가시킴
+학습 기록:
+- number % 2가 0이면 짝수이고, 그렇지 않으면 홀수다.
+- 반환 순서가 [짝수 개수, 홀수 개수]임을 확인한다.
+"""
+
+
 def solution(num_list):
-    answer = [0,0]
-    for x in num_list:
-        if x % 2 == 0:
-            answer[0] += 1
-        else: 
-            answer[1] +=1
-    return answer
+    even_count = 0
+    odd_count = 0
+
+    for number in num_list:
+        if number % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+
+    return [even_count, odd_count]

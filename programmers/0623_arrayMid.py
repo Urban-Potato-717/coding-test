@@ -1,17 +1,16 @@
-# 문제: 중앙값 구하기
-# 난이도: Lv.0 / 체감: ⭐⭐
-# 핵심: sort(), 중앙 인덱스, // 정수 나눗셈
+"""중앙값 구하기.
+
+결과: 해결
+체감 난이도: 2/5
+핵심: 정렬, 중앙 인덱스, 정수 나눗셈
+
+학습 기록:
+- 중앙값을 찾기 전에 배열을 정렬해야 한다.
+- sorted()는 새 리스트를 만들고, list.sort()는 원본을 변경한다.
+"""
+
+
 def solution(array):
-    array.sort()
-    return array[len(array)//2]
-
-'''
-1. 배열의 정렬
-.sort() - 기본 ASC / .sort(reverse=True) - DESC
-중앙 값을 구하는 것은 어떤 정렬도 상관없으니 문제에서는 .sort() 사용
-
-**sort()는 원본을 변경하지만, sorted()는 변경하지 않음!**
-
-2. // 몫 나누기를 사용해 절반으로 나누면, 중앙 인덱스가 나옴
-짝수 개일 때는 중앙값이 없음.
-'''
+    sorted_array = sorted(array)
+    middle_index = len(sorted_array) // 2
+    return sorted_array[middle_index]
