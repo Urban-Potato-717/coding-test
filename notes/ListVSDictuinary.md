@@ -1,32 +1,52 @@
-# 리스트 VS 딕셔너리 (최빈값 구하기)
+# 리스트와 딕셔너리
 
-1. 리스트 (List)
-**순서가 있는 값들의 모음**
+## 한 줄 설명
+
+- 리스트는 값의 순서를 기준으로 저장하고 정수 인덱스로 접근한다.
+- 딕셔너리는 직접 정한 key와 value의 관계로 값을 저장한다.
+
+## 언제 떠올리는가
+
+- 순서대로 값을 모으거나 위치가 중요하면 리스트
+- 이름이나 숫자 등의 key로 값을 찾거나 등장 횟수를 세면 딕셔너리
+
+## 내가 헷갈린 부분
+
+빈도표에서는 숫자 자체를 key로, 등장 횟수를 value로 저장한다.
 
 ```python
-  array = [10, 20, 30, 40]
-           0   1   2   3  ← 인덱스 (자동 부여)
+frequencies = {1: 2, 3: 1}
+# 숫자 1은 두 번, 숫자 3은 한 번 등장
 ```
-- 값에 접근할 때 순서(인덱스)로 찾음
-- array[2] -> 30
-- 인덱스는 항상 **정수** 만 가능
 
-2. 딕셔너리 (Dictionary)
-**내가 정한 key로 값을 지정하는 모음**
+## 최소 예제
 
 ```python
-  freq = {"apple": 3, "banana": 1, "cherry": 3}
-            key : value
+numbers = [10, 20, 30, 40]
+print(numbers[2])  # 30
+
+frequencies = {}
+for number in [1, 1, 3]:
+    if number in frequencies:
+        frequencies[number] += 1
+    else:
+        frequencies[number] = 1
 ```
 
-- 값에 접근할 때 key로 찾음
-- freq["apple"] -> 3
-- key는 숫자, 문자열 등 뭐든 가능
+## 딕셔너리에서 꺼내기
 
-+ 딕셔너리명.keys() 처럼 추가로 뽑아낼 수 있는 기능
-- keys() → key만 필요할 때 (숫자 목록)
-- values() → value만 필요할 때 (횟수 목록)
-- items() → 둘 다 필요할 때 (modes 구할 때처럼)
+```python
+frequencies.keys()    # key만
+frequencies.values()  # value만
+frequencies.items()   # key와 value를 함께
+```
 
+## 관련 문제
 
-# 빈도 세기는 딕셔너리가 더욱 효율적이다
+- `programmers/0623_mode.py`: 숫자별 등장 횟수와 최빈값 계산
+
+## 복습 질문
+
+1. 최빈값을 구할 때 딕셔너리가 자연스러운 이유는 무엇인가?
+2. 횟수만 필요할 때 어떤 메서드를 사용하는가?
+3. key와 value를 함께 순회하는 코드를 작성할 수 있는가?
