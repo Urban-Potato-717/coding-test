@@ -1,5 +1,9 @@
 .claude/
 
+# Personal study guide (local only)
+STUDY_METHOD.md
+README.md
+
 # Python cache files
 __pycache__/
 *.py[cod]
