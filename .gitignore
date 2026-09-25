@@ -7,3 +7,6 @@ README.md
 # Python cache files
 __pycache__/
 *.py[cod]
+
+# 회사 공부 노트 (STEPI 로직 설계 내용 포함 — 로컬 전용)
+개념정리/
