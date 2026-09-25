@@ -26,8 +26,8 @@ def run_debug_example():
     day = "Sunday"
 
     daily_wages = hourly_wage * hours
-    print("condition:", day == "Sunday")
-    print("wages before:", daily_wages)
+    print("condition:", day == "Sunday") # Debugging
+    print("wages before:", daily_wages)  # Debugging
 
     if day == "Sunday":
         daily_wages *= 2
