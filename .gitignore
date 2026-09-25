@@ -1,4 +1,7 @@
 .claude/
+.omc
+.omc/*
+
 
 # Personal study guide (local only)
 STUDY_METHOD.md
